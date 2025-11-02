@@ -10,9 +10,9 @@ function App() {
       <Header />
       <MainContent />
       <UserProfile 
-        name="Jonathan Darko Ntim" 
-        age="30" 
-        bio="Love to travel and being around the Deaf community." 
+        name="Alice" 
+        age="25" 
+        bio="Loves hiking and photography" 
       />
       <Footer />
     </>
