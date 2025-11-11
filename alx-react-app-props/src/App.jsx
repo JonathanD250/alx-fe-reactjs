@@ -1,16 +1,15 @@
-import React from "react";
-import UserContext from "./UserContext";
-import UserProfile from "./UserProfile";
+import ProfilePage from './components/ProfilePage';
+import UserContext from './components/UserContext'; // 1. Import the context
 
 function App() {
-  const user = { name: "Jonathan", email: "jonathan@example.com" };
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
   return (
-    <UserContext.Provider value={user}>
-      <div>
-        <h1>Welcome to the User Context App</h1>
-        <UserProfile />
-      </div>
+    // 2. Wrap the component tree with the Provider
+    // 3. Pass the data as the 'value' prop
+    <UserContext.Provider value={userData}>
+      <ProfilePage /> 
+      {/* 4. Note: We no longer pass the 'userData' prop here! */}
     </UserContext.Provider>
   );
 }
