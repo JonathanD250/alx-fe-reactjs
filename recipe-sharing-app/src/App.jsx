@@ -1,19 +1,29 @@
+import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
-import './App.css'; // Keep the default CSS if you want
+import RecipeDetails from './components/RecipeDetails';
+
+// Home component to hold the form and list
+const Home = () => (
+    <>
+        <AddRecipeForm />
+        <hr style={{ margin: '30px 0' }} />
+        <RecipeList />
+    </>
+);
 
 function App() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Recipe Sharing Application 🍽️</h1>
       
-      {/* The form allows adding a recipe, which updates the global state */}
-      <AddRecipeForm />
-      
-      <hr style={{ margin: '30px 0' }} />
-      
-      {/* The list reads the updated global state and displays it */}
-      <RecipeList />
+      <Routes>
+        {/* Route for the home page (Form and List) */}
+        <Route path="/" element={<Home />} />
+        
+        {/* Dynamic route for the recipe details page. :recipeId captures the ID from the URL */}
+        <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
+      </Routes>
     </div>
   );
 }
