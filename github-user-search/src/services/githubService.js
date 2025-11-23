@@ -1,13 +1,15 @@
 import axios from 'axios';
 
-const apiKey = import.meta.env.VITE_GITHUB_API_KEY;
+const fetchUserData = async ({ username, location, minRepos }) => {
+  // Construct the query string
+  // Example: "tom location:madrid repos:>10"
+  let query = '';
+  
+  if (username) query += `${username}`;
+  if (location) query += `+location:${location}`;
+  if (minRepos) query += `+repos:>${minRepos}`;
 
-const fetchUserData = async (username) => {
-  const response = await axios.get(`https://api.github.com/users/${username}`, {
-    headers: {
-      Authorization: `token ${apiKey}`,
-    },
-  });
+  const response = await axios.get(`https://api.github.com/search/users?q=${query}`);
   return response.data;
 };
 

@@ -1,18 +1,14 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Search from './components/Search';
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <header>
-          <h1>GitHub User Search</h1>
-        </header>
-        <main>
-          <Routes>
-            <Route path="/" element={<p>Home Page (Search Component goes here)</p>} />
-            {/* We will add more routes later */}
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<Search />} />
+        </Routes>
       </div>
     </Router>
   );
