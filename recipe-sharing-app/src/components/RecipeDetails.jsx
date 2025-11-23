@@ -8,16 +8,31 @@ const RecipeDetails = () => {
   const recipe = useRecipeStore((state) =>
     state.recipes.find((recipe) => recipe.id === Number(recipeId))
   );
+  // Import actions and favorites state
+  const addFavorite = useRecipeStore((state) => state.addFavorite);
+  const removeFavorite = useRecipeStore((state) => state.removeFavorite);
+  const favorites = useRecipeStore((state) => state.favorites);
 
-  if (!recipe) {
-    return <div>Recipe not found!</div>;
-  }
+  if (!recipe) return <div>Recipe not found!</div>;
+
+  const isFavorite = favorites.includes(recipe.id);
 
   return (
     <div>
       <h1>{recipe.title}</h1>
       <p>{recipe.description}</p>
-      {/* Render Edit Form and Delete Button */}
+
+      {/* Favorite Button Toggle */}
+      <button 
+         onClick={() => isFavorite ? removeFavorite(recipe.id) : addFavorite(recipe.id)}
+         style={{ 
+           backgroundColor: isFavorite ? 'gold' : 'white',
+           margin: '10px'
+         }}
+      >
+        {isFavorite ? '★ Remove from Favorites' : '☆ Add to Favorites'}
+      </button>
+
       <EditRecipeForm recipe={recipe} />
       <DeleteRecipeButton recipeId={recipe.id} />
     </div>
