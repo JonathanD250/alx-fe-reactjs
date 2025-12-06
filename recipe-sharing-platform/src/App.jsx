@@ -1,17 +1,12 @@
-import { useState } from 'react'
-import './App.css' // Ensure this is still imported, or remove if you deleted the file
+import React from 'react';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div className="text-center p-4">
-      <h1 className="text-blue-500 text-4xl font-bold">
-        Recipe Sharing Platform
-      </h1>
-      <p className="mt-4 text-gray-600 text-lg">
-        Tailwind CSS is successfully configured!
-      </p>
+    <div className="bg-gray-100 min-h-screen">
+      <HomePage />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
