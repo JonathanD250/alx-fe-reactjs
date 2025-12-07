@@ -17,6 +17,19 @@ const HomePage = () => {
         Recipe Sharing Platform
       </h1>
 
+      {/* ------------------------------------------------------ */}
+      {/* NEW: Button to Navigate to Add Recipe Form             */}
+      {/* ------------------------------------------------------ */}
+      <div className="text-center mb-8">
+        <Link 
+          to="/add-recipe"
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300 shadow-md hover:shadow-lg"
+        >
+          + Add New Recipe
+        </Link>
+      </div>
+      {/* ------------------------------------------------------ */}
+
       {/* Grid Layout for Recipes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {recipes.map((recipe) => (
@@ -43,8 +56,7 @@ const HomePage = () => {
                 </p>
               </div>
 
-            </Link> {/* End of Link */}
-            {/* ------------------------------------------------------ */}
+            </Link>
           </div>
         ))}
       </div>
