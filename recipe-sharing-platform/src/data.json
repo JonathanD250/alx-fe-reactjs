@@ -3,40 +3,87 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper. Simple yet delicious.",
-    "image": "https://via.placeholder.com/300x200?text=Spaghetti",
-    "ingredients": ["Spaghetti", "Eggs", "Pecorino Romano", "Guanciale", "Black Pepper"],
+    "image": "/public/images/Spaghetti Carbonara.jpg",
+    "ingredients": [
+      "Spaghetti",
+      "Eggs",
+      "Pecorino Romano Cheese",
+      "Guanciale or Pancetta",
+      "Black Pepper"
+    ],
     "instructions": [
-      "Boil the pasta.",
-      "Fry the guanciale until crisp.",
-      "Whisk eggs and cheese.",
-      "Toss hot pasta with egg mixture and guanciale.",
-      "Serve immediately."
+      "Boil the pasta in salted water.",
+      "Fry the guanciale in a pan until crisp.",
+      "Whisk eggs and cheese in a bowl.",
+      "Toss hot pasta with the egg mixture and guanciale (off the heat to avoid scrambling).",
+      "Serve immediately with extra pepper."
     ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/300x200?text=Chicken+Tikka",
-    "ingredients": ["Chicken", "Yogurt", "Tomato Puree", "Cream", "Spices"],
+    "image": "/public/images/Chicken Tikka Masala.jpg",
+    "ingredients": [
+      "Chicken Breast",
+      "Yogurt",
+      "Tomato Puree",
+      "Heavy Cream",
+      "Garam Masala",
+      "Cumin",
+      "Ginger & Garlic"
+    ],
     "instructions": [
-      "Marinate chicken in yogurt and spices.",
-      "Grill the chicken.",
-      "Prepare the tomato gravy.",
-      "Simmer chicken in gravy with cream.",
-      "Serve with naan."
+      "Marinate chicken in yogurt and spices for at least 1 hour.",
+      "Grill or bake the chicken until cooked.",
+      "Prepare the tomato gravy with onions, ginger, and garlic.",
+      "Add the chicken to the gravy and simmer.",
+      "Stir in cream and serve with naan or rice."
     ]
   },
   {
     "id": 3,
     "title": "Vegetable Stir Fry",
     "summary": "A quick and healthy mix of fresh vegetables tossed in a savory soy and ginger sauce.",
-    "image": "https://via.placeholder.com/300x200?text=Stir+Fry"
+    "image": "/public/images/Vegetable Stir Fry.jpg",
+    "ingredients": [
+      "Broccoli florets",
+      "Bell Peppers (Red and Green)",
+      "Carrots",
+      "Soy Sauce",
+      "Ginger (minced)",
+      "Garlic (minced)",
+      "Sesame Oil"
+    ],
+    "instructions": [
+      "Chop all vegetables into bite-sized pieces.",
+      "Heat sesame oil in a wok or large pan.",
+      "Stir fry garlic and ginger until fragrant.",
+      "Add vegetables and stir fry for 5-7 minutes (keep them crunchy).",
+      "Pour in soy sauce, toss well, and serve over steamed rice."
+    ]
   },
   {
     "id": 4,
     "title": "Chocolate Brownies",
     "summary": "Rich, fudgy chocolate brownies with a crackly top and gooey center. Perfect for dessert.",
-    "image": "https://via.placeholder.com/300x200?text=Brownies"
+    "image": "/public/images/Chocolate Brownies.jpg",
+    "ingredients": [
+      "Unsalted Butter",
+      "Granulated Sugar",
+      "Eggs",
+      "Cocoa Powder",
+      "All-purpose Flour",
+      "Chocolate Chips",
+      "Vanilla Extract"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C).",
+      "Melt butter and mix with sugar until smooth.",
+      "Beat in eggs and vanilla extract.",
+      "Fold in cocoa powder, flour, and chocolate chips.",
+      "Pour batter into a greased baking pan.",
+      "Bake for 25-30 minutes until set."
+    ]
   }
 ]

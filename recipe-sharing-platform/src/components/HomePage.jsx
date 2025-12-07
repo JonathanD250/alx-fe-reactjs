@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import recipeData from '../data.json';
 
 const HomePage = () => {
@@ -8,8 +8,6 @@ const HomePage = () => {
 
   // useEffect to load data when component mounts
   useEffect(() => {
-    // In a real API application, you would fetch data here.
-    // For this task, we set the mock data.
     setRecipes(recipeData);
   }, []);
 
@@ -26,22 +24,27 @@ const HomePage = () => {
             key={recipe.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 hover:shadow-xl"
           >
-            {/* Recipe Image */}
-            <img
-              src={recipe.image}
-              alt={recipe.title}
-              className="w-full h-40 object-cover"
-            />
+            <Link to={`/recipe/${recipe.id}`}>
             
-            {/* Recipe Content */}
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-2 text-gray-800">
-                {recipe.title}
-              </h2>
-              <p className="text-gray-600">
-                {recipe.summary}
-              </p>
-            </div>
+              {/* Recipe Image */}
+              <img
+                src={recipe.image}
+                alt={recipe.title}
+                className="w-full h-40 object-cover"
+              />
+              
+              {/* Recipe Content */}
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2 text-gray-800">
+                  {recipe.title}
+                </h2>
+                <p className="text-gray-600">
+                  {recipe.summary}
+                </p>
+              </div>
+
+            </Link> {/* End of Link */}
+            {/* ------------------------------------------------------ */}
           </div>
         ))}
       </div>
